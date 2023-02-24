@@ -112,10 +112,3 @@ search:
   field: post
   format: html
   limit: 10000
-
-# hexo-filter-emoji
-emoji:
-  enable: true
-  className: github-emoji
-  styles:
-  customEmojis:
