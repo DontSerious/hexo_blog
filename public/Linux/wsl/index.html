@@ -20,15 +20,21 @@
     var CONFIG = {"hostname":"tomatoblog.netlify.app","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Tomato&#39;s Blog">
-<meta property="og:url" content="https://tomatoblog.netlify.app/archives/2023/index.html">
+  <meta name="description" content="安装 Debian 代码123456789# 此方法安装默认使用wsl2 之后无需额外设置wsl --install -d Debian# 检查版本cat &#x2F;etc&#x2F;issue# 重装wsl --unregister Debianwsl --install -d Debian  修改 root 密码powershell中输入 设置进入root用户 Debian config –default-us">
+<meta property="og:type" content="article">
+<meta property="og:title" content="wsl 备忘基操">
+<meta property="og:url" content="https://tomatoblog.netlify.app/Linux/wsl/index.html">
 <meta property="og:site_name" content="Tomato&#39;s Blog">
+<meta property="og:description" content="安装 Debian 代码123456789# 此方法安装默认使用wsl2 之后无需额外设置wsl --install -d Debian# 检查版本cat &#x2F;etc&#x2F;issue# 重装wsl --unregister Debianwsl --install -d Debian  修改 root 密码powershell中输入 设置进入root用户 Debian config –default-us">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-02-24T02:24:20.000Z">
+<meta property="article:modified_time" content="2023-02-24T02:44:17.665Z">
 <meta property="article:author" content="TOMATO">
+<meta property="article:tag" content="Memo">
+<meta property="article:tag" content="Wsl">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://tomatoblog.netlify.app/archives/2023/">
+<link rel="canonical" href="https://tomatoblog.netlify.app/Linux/wsl/">
 
 
 <script id="page-configurations">
@@ -36,12 +42,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>归档 | Tomato's Blog</title>
+  <title>wsl 备忘基操 | Tomato's Blog</title>
   
 
 
@@ -177,90 +183,104 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 4 篇日志。 继续努力。</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://tomatoblog.netlify.app/Linux/wsl/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TOMATO">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tomato's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          wsl 备忘基操
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-02-24 10:24:20 / 修改时间：10:44:17" itemprop="dateCreated datePublished" datetime="2023-02-24T10:24:20+08:00">2023-02-24</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2023</span>
-    </div>
+        <h1 id="安装-Debian-代码"><a href="#安装-Debian-代码" class="headerlink" title="安装 Debian 代码"></a>安装 Debian 代码</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># 此方法安装默认使用wsl2 之后无需额外设置</span><br><span class="line">wsl --install -d Debian</span><br><span class="line"></span><br><span class="line"># 检查版本</span><br><span class="line">cat /etc/issue</span><br><span class="line"></span><br><span class="line"># 重装</span><br><span class="line">wsl --unregister Debian</span><br><span class="line">wsl --install -d Debian</span><br></pre></td></tr></table></figure>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2023-02-24T10:40:00+08:00"
-              content="2023-02-24">
-          02-24
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/emoji/" itemprop="url">
-            <span itemprop="name">emoji 大全</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2023-02-24T10:24:20+08:00"
-              content="2023-02-24">
-          02-24
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/Linux/wsl/" itemprop="url">
-            <span itemprop="name">wsl 备忘基操</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2023-01-08T17:28:00+08:00"
-              content="2023-01-08">
-          01-08
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/Linux/Linux/" itemprop="url">
-            <span itemprop="name">Linux 备忘基操</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
+<h1 id="修改-root-密码"><a href="#修改-root-密码" class="headerlink" title="修改 root 密码"></a>修改 root 密码</h1><h2 id="powershell中输入-设置进入root用户"><a href="#powershell中输入-设置进入root用户" class="headerlink" title="powershell中输入 设置进入root用户"></a>powershell中输入 设置进入root用户</h2><blockquote>
+<p>Debian config –default-user root</p>
+</blockquote>
+<h2 id="进入wsl系统-输入此命令按提示修改密码"><a href="#进入wsl系统-输入此命令按提示修改密码" class="headerlink" title="进入wsl系统 输入此命令按提示修改密码"></a>进入wsl系统 输入此命令按提示修改密码</h2><blockquote>
+<p>passwd</p>
+</blockquote>
+<h2 id="powershell-根据个人需求选择是否设置回普通用户"><a href="#powershell-根据个人需求选择是否设置回普通用户" class="headerlink" title="powershell 根据个人需求选择是否设置回普通用户"></a>powershell 根据个人需求选择是否设置回普通用户</h2><blockquote>
+<p>Debian config –default-user tomato</p>
+</blockquote>
+<h1 id="记得换源"><a href="#记得换源" class="headerlink" title="记得换源"></a>记得换源</h1><h1 id="迁移wsl位置到其他盘"><a href="#迁移wsl位置到其他盘" class="headerlink" title="迁移wsl位置到其他盘"></a><strong>迁移wsl位置到其他盘</strong></h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#导出系统</span><br><span class="line">wsl --export Debian E:\Debian2.tar</span><br><span class="line"></span><br><span class="line">#取消挂载（删除debian系统）</span><br><span class="line">wsl --unregister Debian</span><br><span class="line"></span><br><span class="line">#重新挂载到E盘wsl2目录下</span><br><span class="line">wsl --import Debian E:\wsl2\Debian E:\Debian2.tar</span><br></pre></td></tr></table></figure>
 
     </div>
-  </div>
-  
-  
-  
 
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Memo/" rel="tag"># Memo</a>
+              <a href="/tags/Wsl/" rel="tag"># Wsl</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/Linux/Linux/" rel="prev" title="Linux 备忘基操">
+      <i class="fa fa-chevron-left"></i> Linux 备忘基操
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/emoji/" rel="next" title="emoji 大全">
+      emoji 大全 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
 
@@ -313,6 +333,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-Debian-%E4%BB%A3%E7%A0%81"><span class="nav-number">1.</span> <span class="nav-text">安装 Debian 代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9-root-%E5%AF%86%E7%A0%81"><span class="nav-number">2.</span> <span class="nav-text">修改 root 密码</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#powershell%E4%B8%AD%E8%BE%93%E5%85%A5-%E8%AE%BE%E7%BD%AE%E8%BF%9B%E5%85%A5root%E7%94%A8%E6%88%B7"><span class="nav-number">2.1.</span> <span class="nav-text">powershell中输入 设置进入root用户</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E5%85%A5wsl%E7%B3%BB%E7%BB%9F-%E8%BE%93%E5%85%A5%E6%AD%A4%E5%91%BD%E4%BB%A4%E6%8C%89%E6%8F%90%E7%A4%BA%E4%BF%AE%E6%94%B9%E5%AF%86%E7%A0%81"><span class="nav-number">2.2.</span> <span class="nav-text">进入wsl系统 输入此命令按提示修改密码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#powershell-%E6%A0%B9%E6%8D%AE%E4%B8%AA%E4%BA%BA%E9%9C%80%E6%B1%82%E9%80%89%E6%8B%A9%E6%98%AF%E5%90%A6%E8%AE%BE%E7%BD%AE%E5%9B%9E%E6%99%AE%E9%80%9A%E7%94%A8%E6%88%B7"><span class="nav-number">2.3.</span> <span class="nav-text">powershell 根据个人需求选择是否设置回普通用户</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%B0%E5%BE%97%E6%8D%A2%E6%BA%90"><span class="nav-number">3.</span> <span class="nav-text">记得换源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%81%E7%A7%BBwsl%E4%BD%8D%E7%BD%AE%E5%88%B0%E5%85%B6%E4%BB%96%E7%9B%98"><span class="nav-number">4.</span> <span class="nav-text">迁移wsl位置到其他盘</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
