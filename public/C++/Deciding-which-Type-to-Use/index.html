@@ -20,15 +20,21 @@
     var CONFIG = {"hostname":"tomatoblog.netlify.app","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Tomato&#39;s Blog">
-<meta property="og:url" content="https://tomatoblog.netlify.app/tags/Emoji/index.html">
+  <meta name="description" content="Use an unsigned type when you know that the vales cannot be negative. Use int for integer arithmetic, short is usually too small and, in practice, long often has the same size as int. If your data va">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Deciding which Type to Use">
+<meta property="og:url" content="https://tomatoblog.netlify.app/C++/Deciding-which-Type-to-Use/index.html">
 <meta property="og:site_name" content="Tomato&#39;s Blog">
+<meta property="og:description" content="Use an unsigned type when you know that the vales cannot be negative. Use int for integer arithmetic, short is usually too small and, in practice, long often has the same size as int. If your data va">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-02-26T02:42:33.000Z">
+<meta property="article:modified_time" content="2023-02-26T03:33:09.497Z">
 <meta property="article:author" content="TOMATO">
+<meta property="article:tag" content="C++">
+<meta property="article:tag" content="C++ Primer">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://tomatoblog.netlify.app/tags/Emoji/">
+<link rel="canonical" href="https://tomatoblog.netlify.app/C++/Deciding-which-Type-to-Use/">
 
 
 <script id="page-configurations">
@@ -36,12 +42,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>标签: Emoji | Tomato's Blog</title>
+  <title>Deciding which Type to Use | Tomato's Blog</title>
   
 
 
@@ -177,51 +183,95 @@
         <div class="content-wrap">
           
 
-          <div class="content tag">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">Emoji
-          <small>标签</small>
-        </h2>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://tomatoblog.netlify.app/C++/Deciding-which-Type-to-Use/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TOMATO">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tomato's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Deciding which Type to Use
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-02-26 10:42:33 / 修改时间：11:33:09" itemprop="dateCreated datePublished" datetime="2023-02-26T10:42:33+08:00">2023-02-26</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Language/" itemprop="url" rel="index"><span itemprop="name">Language</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2023</span>
+        <ol>
+<li><strong>Use an unsigned type when you know that the vales cannot be negative.</strong></li>
+<li><strong>Use <code>int</code> for integer arithmetic,</strong> <code>short</code> is usually too small and, in practice, <code>long</code> often has the same size as <code>int</code>. If your data values are larger than the minimum guaranteed size as <code>int</code>, then use <code>long long</code>.</li>
+<li><strong>Do not use plain <code>char</code> or <code>bool</code> in arithmetic expressions.</strong> Use them <em>only</em> to hold characters or truth values. Computations using <code>char</code> are especially problematic because <code>char</code> is <code>signed</code> on some machines and <code>unsigned</code> on others. If you need a tiny integer, explicitly specify either <code>signed char</code> or <code>unsigned char</code>.</li>
+<li><strong>Use <code>double</code> for floating-point computations;</strong> <code>float</code> usually does not have enough precision, and the cost of double-precision calculations versus single-precision is negligible. In fact, on some machines, double-precision operations are faster than single. The precision offered by <code>long double</code> usually is unnecessary and often entails considerable run-time cost.</li>
+</ol>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2023-02-24T10:40:00+08:00"
-              content="2023-02-24">
-          02-24
-        </time>
-      </div>
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/C/" rel="tag"># C++</a>
+              <a href="/tags/C-Primer/" rel="tag"># C++ Primer</a>
+          </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/emoji/" itemprop="url">
-            <span itemprop="name">emoji 大全</span>
-          </a>
-      </div>
+        
 
-    </header>
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/hello-world/" rel="prev" title="Hello World">
+      <i class="fa fa-chevron-left"></i> Hello World
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
   </article>
-
-    </div>
-  </div>
   
   
-  
-
   
 
 
