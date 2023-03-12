@@ -20,20 +20,20 @@
     var CONFIG = {"hostname":"tomatoblog.netlify.app","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="在许多情况下，需要生成随机数。关于随机数生成器，有两个相关的函数。一个是 rand()，该函数只返回一个伪随机数。生成随机数之前必须先调用 srand() 函数。 下面是一个关于生成随机数的简单实例。实例中使用了 time() 函数来获取系统时间的秒数，通过调用 rand() 函数来生成随机数： 123456789101112131415161718192021#include &lt;iostr">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://tomatoblog.netlify.app/hello-world/index.html">
+<meta property="og:title" content="rand()">
+<meta property="og:url" content="https://tomatoblog.netlify.app/C++/rand/index.html">
 <meta property="og:site_name" content="Tomato&#39;s Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="在许多情况下，需要生成随机数。关于随机数生成器，有两个相关的函数。一个是 rand()，该函数只返回一个伪随机数。生成随机数之前必须先调用 srand() 函数。 下面是一个关于生成随机数的简单实例。实例中使用了 time() 函数来获取系统时间的秒数，通过调用 rand() 函数来生成随机数： 123456789101112131415161718192021#include &lt;iostr">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-02-24T03:52:08.075Z">
-<meta property="article:modified_time" content="2023-02-24T04:04:58.755Z">
+<meta property="article:published_time" content="2023-03-05T02:41:28.000Z">
+<meta property="article:modified_time" content="2023-03-05T02:49:14.928Z">
 <meta property="article:author" content="TOMATO">
-<meta property="article:tag" content="Blog">
+<meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://tomatoblog.netlify.app/hello-world/">
+<link rel="canonical" href="https://tomatoblog.netlify.app/C++/rand/">
 
 
 <script id="page-configurations">
@@ -46,7 +46,7 @@
   };
 </script>
 
-  <title>Hello World | Tomato's Blog</title>
+  <title>rand() | Tomato's Blog</title>
   
 
 
@@ -189,7 +189,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://tomatoblog.netlify.app/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://tomatoblog.netlify.app/C++/rand/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -202,7 +202,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hello World
+          rand()
         </h1>
 
         <div class="post-meta">
@@ -213,7 +213,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2023-02-24 11:52:08 / 修改时间：12:04:58" itemprop="dateCreated datePublished" datetime="2023-02-24T11:52:08+08:00">2023-02-24</time>
+              <time title="创建时间：2023-03-05 10:41:28 / 修改时间：10:49:14" itemprop="dateCreated datePublished" datetime="2023-03-05T10:41:28+08:00">2023-03-05</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -221,7 +221,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Blog/" itemprop="url" rel="index"><span itemprop="name">Blog</span></a>
+                  <a href="/categories/C/" itemprop="url" rel="index"><span itemprop="name">C++</span></a>
                 </span>
             </span>
 
@@ -236,22 +236,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start">Quick Start</h2>
-<h3 id="Create-a-new-post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-<h2 id="Already-change-markdown-to-markdown-it">Already change markdown to markdown-it</h2>
-<p><a target="_blank" rel="noopener" href="https://lamirs.vercel.app/hexo-%E4%BD%BF%E7%94%A8%E6%B8%B2%E6%9F%93%E5%99%A8-hexo-renderer-markdown-it">Learn from Lamirs ☆ Blog</a></p>
+        <p>在许多情况下，需要生成随机数。关于随机数生成器，有两个相关的函数。一个是 rand()，该函数只返回一个伪随机数。生成随机数之前必须先调用 srand() 函数。</p>
+<p>下面是一个关于生成随机数的简单实例。实例中使用了 time() 函数来获取系统时间的秒数，通过调用 rand() 函数来生成随机数：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;ctime&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdlib&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> i,j;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 设置种子</span></span><br><span class="line">    <span class="built_in">srand</span>( (<span class="type">unsigned</span>)<span class="built_in">time</span>( <span class="literal">NULL</span> ) );</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* 生成 10 个随机数 */</span></span><br><span class="line">    <span class="keyword">for</span>( i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++ )&#123;</span><br><span class="line">        <span class="comment">// 生成实际的随机数</span></span><br><span class="line">        j= <span class="built_in">rand</span>();</span><br><span class="line">        cout &lt;&lt;<span class="string">&quot;随机数： &quot;</span> &lt;&lt; j &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+<p><em>copy from w3c</em></p>
 
     </div>
 
@@ -261,7 +249,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Blog/" rel="tag"># Blog</a>
+              <a href="/tags/C/" rel="tag"># C++</a>
           </div>
 
         
@@ -270,12 +258,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/VSCode/emoji/" rel="prev" title="emoji 大全">
-      <i class="fa fa-chevron-left"></i> emoji 大全
+    <a href="/C++/Deciding-which-Type-to-Use/" rel="prev" title="Deciding which Type to Use">
+      <i class="fa fa-chevron-left"></i> Deciding which Type to Use
     </a></div>
       <div class="post-nav-item">
-    <a href="/C++/Deciding-which-Type-to-Use/" rel="next" title="Deciding which Type to Use">
-      Deciding which Type to Use <i class="fa fa-chevron-right"></i>
+    <a href="/C#/grammar/" rel="next" title="C# 代码框架">
+      C# 代码框架 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -335,7 +323,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Already-change-markdown-to-markdown-it"><span class="nav-number">2.</span> <span class="nav-text">Already change markdown to markdown-it</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
