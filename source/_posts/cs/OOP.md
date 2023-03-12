@@ -2,10 +2,10 @@
 title: C# OOP
 date: 2023-03-12 16:32:13
 categories:
-- C#
+- cs
 
 tags:
-- C#
+- cs
 - grammar
 ---
 # OOP

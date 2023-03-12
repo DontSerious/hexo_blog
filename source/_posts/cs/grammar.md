@@ -2,10 +2,10 @@
 title: C# 代码框架
 date: 2023-03-12 15:03:34
 categories:
-- C#
+- cs
 
 tags:
-- C#
+- cs
 - grammar
 ---
 # 代码框架
