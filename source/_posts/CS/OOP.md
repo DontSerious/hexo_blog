@@ -9,6 +9,8 @@ tags:
 - grammar
 ---
 # OOP
+<!--more-->
+
 ## 属性
 ```C#
 class Person
