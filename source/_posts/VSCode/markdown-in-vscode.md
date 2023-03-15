@@ -28,7 +28,7 @@ tags:
   - [1.13. 任务列表](#113-任务列表)
 - [2. Markdown Support for Visual Studio Code](#2-markdown-support-for-visual-studio-code)
   - [2.1. Table of contents](#21-table-of-contents)
-
+<!--more-->
 
 # 1. 基础语法
 

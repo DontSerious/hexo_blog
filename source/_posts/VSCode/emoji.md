@@ -10,7 +10,7 @@ tags:
 - Memo
 ---
 People
-
+<!--more-->
 | :bowtie: `:bowtie:` | :smile: `:smile:` | :laughing: `:laughing:` |
 |---|---|---|
 | :blush: `:blush:` | :smiley: `:smiley:` | :relaxed: `:relaxed:` |

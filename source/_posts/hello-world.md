@@ -18,6 +18,7 @@ $ hexo new "My New Post"
 ```
 
 More info: [Writing](https://hexo.io/docs/writing.html)
+<!--more-->
 
 ### Run server
 
@@ -46,3 +47,5 @@ More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
 ## Already change markdown to markdown-it
 
 [Learn from Lamirs ☆ Blog](https://lamirs.vercel.app/hexo-%E4%BD%BF%E7%94%A8%E6%B8%B2%E6%9F%93%E5%99%A8-hexo-renderer-markdown-it)
+
+## Use `<!--more-->` to hide content.

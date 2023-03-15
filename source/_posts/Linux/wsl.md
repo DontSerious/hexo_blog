@@ -22,7 +22,7 @@ cat /etc/issue
 wsl --unregister Debian
 wsl --install -d Debian
 ```
-
+<!--more-->
 # 修改 root 密码
 ## powershell中输入 设置进入root用户
 > Debian config --default-user root
