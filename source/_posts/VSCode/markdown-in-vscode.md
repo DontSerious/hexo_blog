@@ -28,6 +28,7 @@ tags:
   - [1.13. 任务列表](#113-任务列表)
 - [2. Markdown Support for Visual Studio Code](#2-markdown-support-for-visual-studio-code)
   - [2.1. Table of contents](#21-table-of-contents)
+  - [2.2. Table formatter](#22-table-formatter)
 <!--more-->
 
 # 1. 基础语法
@@ -194,5 +195,7 @@ Try to put a blank line before...
 - Easily add/update/remove section numbering
     - tab `shift + ctrl + p` and type "section" and find Add/Update section numbers
     - tab `shift + ctrl + [` or `]` to change the title
+## 2.2. Table formatter
+- tag `alt + shift + f`
 
 *sort from [Markdown语法](https://markdown.com.cn)*
