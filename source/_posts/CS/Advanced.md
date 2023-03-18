@@ -35,7 +35,6 @@ tags:
 | ReadAllText()  | 读取文件的内容                                             |
 | Replace()      | 用另一个文件的内容替换文件的内容                           |
 | WriteAllText() | 创建新文件并将内容写入其中。如果文件已经存在，它将被覆盖。 |
-<!--more-->
 ### 1.0.1. 实例
 ```C#
 using System.IO;  // 包括 System.IO 命名空间

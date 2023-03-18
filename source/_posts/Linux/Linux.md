@@ -9,12 +9,10 @@ tags:
 - Memo
 - Debian
 ---
-
 # Linux 查看当前版本
 ```
 cat /etc/issue
 ```
-<!--more-->
 # Debian 11 换源
 ```
 cat >> /etc/apt/sources.list  << EOF

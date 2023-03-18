@@ -8,7 +8,6 @@ tags:
 - Memo
 - Markdown
 ---
-
 - [1. 基础语法](#1-基础语法)
   - [1.1. 标题](#11-标题)
   - [1.2. 段落](#12-段落)
@@ -29,7 +28,6 @@ tags:
 - [2. Markdown Support for Visual Studio Code](#2-markdown-support-for-visual-studio-code)
   - [2.1. Table of contents](#21-table-of-contents)
   - [2.2. Table formatter](#22-table-formatter)
-<!--more-->
 
 # 1. 基础语法
 

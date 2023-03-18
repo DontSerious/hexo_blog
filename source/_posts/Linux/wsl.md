@@ -9,7 +9,6 @@ tags:
 - Memo
 - Wsl
 ---
-
 # 安装 Debian 代码
 ```
 # 此方法安装默认使用wsl2 之后无需额外设置
@@ -22,7 +21,6 @@ cat /etc/issue
 wsl --unregister Debian
 wsl --install -d Debian
 ```
-<!--more-->
 # 修改 root 密码
 ## powershell中输入 设置进入root用户
 > Debian config --default-user root
