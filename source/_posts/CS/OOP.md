@@ -5,7 +5,6 @@ categories:
 - CS
 
 tags:
-- CS
 - grammar
 ---
 - [1. 属性](#1-属性)

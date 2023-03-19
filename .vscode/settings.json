@@ -1,0 +1,18 @@
+{
+    "commentTranslate.source": "intellsmi.comment-translate-ali.cloud",
+    "commentTranslate.targetLanguage": "zh-CN",
+    "commentTranslate.hover.enabled": true,
+    "cSpell.words": [
+        "asctime",
+        "cerr",
+        "cout",
+        "endl",
+        "iostream",
+        "isdst",
+        "localtime",
+        "mday",
+        "timeptr",
+        "wday",
+        "yday"
+    ]
+}

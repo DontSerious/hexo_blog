@@ -6,7 +6,6 @@ categories:
 - C++
 
 tags:
-- C++
 - C++ Primer
 
 ---
