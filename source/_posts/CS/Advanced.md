@@ -9,7 +9,7 @@ tags:
 
 toc: true
 ---
-# 1. IO
+# IO
 文件类`File`来自`System.IO`命名空间，允许我们处理文件
 
 | 方法           | 描述                                                       |
@@ -22,7 +22,7 @@ toc: true
 | ReadAllText()  | 读取文件的内容                                             |
 | Replace()      | 用另一个文件的内容替换文件的内容                           |
 | WriteAllText() | 创建新文件并将内容写入其中。如果文件已经存在，它将被覆盖。 |
-### 1.0.1. 实例
+### 实例
 ```C#
 using System.IO;  // 包括 System.IO 命名空间
 
@@ -34,13 +34,13 @@ Console.WriteLine(readText);  // 输出内容
 ```
 > Hello World!
 
-# 2. 异常处理
+# 异常处理
 `try` 语句允许您定义要在执行时测试错误的代码块。
 
 `catch` 语句允许您定义要执行的代码块，如果 `try` 块中发生错误。
 
 `finally` 语句允许您在 `try...catch` 之后执行代码，而不管结果如何
-### 2.0.1. 实例
+### 实例
 ```C#
 try
 {
@@ -56,13 +56,13 @@ finally
   Console.WriteLine("The 'try catch' is finished.");
 }
 ```
-## 2.1. throw 语句
+## throw 语句
 `throw` 语句允许您创建自定义错误。
 
 `throw` 语句与异常类exception class一起使用。 
 C# 中有许多可用的异常类： `ArithmeticException`, `FileNotFoundException`, 
 `IndexOutOfRangeException`, `TimeOutException`等
-### 2.1.1. 实例
+### 实例
 ```C#
 static void checkAge(int age)
 {
@@ -83,9 +83,9 @@ static void Main(string[] args)
 ```
 > System.ArithmeticException: 'Access denied - You must be at least 18 years old.'
 
-# 3. 运算符重载
+# 运算符重载
 您可以重定义或重载 C# 中内置的运算符。因此，程序员也可以使用用户自定义类型的运算符。重载运算符是具有特殊名称的函数，是通过关键字 `operator` 后跟运算符的符号来定义的。与其他函数一样，重载运算符有返回类型和参数列表。
-### 3.0.1. 实例
+### 实例
 ```C#
 public static Box operator + (Box b, Box c)
 {
@@ -98,7 +98,7 @@ public static Box operator + (Box b, Box c)
 ```
 上面的函数为用户自定义的类 Box 实现了加法运算符（+）。它把两个 Box 对象的属性相加，并返回相加后的 Box 对象。
 
-## 3.1. 可重载和不可重载运算符
+## 可重载和不可重载运算符
 | 运算符                                | 描述                                         |
 | ------------------------------------- | -------------------------------------------- |
 | +, -, !, ~, ++, --                    | 这些一元运算符只有一个操作数，且可以被重载。 |
@@ -107,7 +107,7 @@ public static Box operator + (Box b, Box c)
 | &&, \|\|                              | 这些条件逻辑运算符不能被直接重载。           |
 | +=, -=, *=, /=, %=                    | 这些赋值运算符不能被重载。                   |
 | =, ., ?:, ->, new, is, sizeof, typeof | 这些运算符不能被重载。                       |
-### 3.1.1. 实例
+### 实例
 ```C#
 public static bool operator == (Box lhs, Box rhs)
       {
@@ -178,7 +178,7 @@ public static bool operator == (Box lhs, Box rhs)
       }
 ```
 
-# 4. 结构体(struct)
+# 结构体(struct)
 在 C# 中，结构体是值类型数据结构。它使得一个单一变量可以存储各种数据类型的相关数据。`struct` 关键字用于创建结构体。
 ```C#
 struct Books
@@ -204,7 +204,7 @@ struct Books
 
 };  
 ```
-## 4.1. 特点
+## 特点
 您已经用了一个简单的名为 Books 的结构。在 C# 中的结构与传统的 C 或 C++ 中的结构不同。C# 中的结构有以下特点：
 
 - 结构可带有方法、字段、索引、属性、运算符方法和事件。
@@ -216,7 +216,7 @@ struct Books
 - 当您使用 New 操作符创建一个结构对象时，会调用适当的构造函数来创建结构。与类不同，结构可以不使用 New 操作符即可被实例化。
 - 如果不使用 New 操作符，只有在所有的字段都被初始化之后，字段才被赋值，对象才被使用。
 
-# 5. 命名空间(namespace)
+# 命名空间(namespace)
 - 命名空间的设计目的是提供一种让一组名称与其他名称分隔开的方式。在一个命名空间中声明的类的名称与另一个命名空间中声明的相同的类的名称不冲突。  
 - 为了调用支持命名空间版本的函数或变量，会把命名空间的名称置于前面。  
 例如：`namespace_name.item_name;`

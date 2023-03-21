@@ -9,7 +9,7 @@ tags:
 
 toc: true
 ---
-# 1. 属性
+# 属性
 ```C#
 class Person
 {
@@ -28,7 +28,7 @@ class Person
   { get; set; }
 }
 ```
-# 2. 继承
+# 继承
 要从类继承，请使用 `:` 符号。
 ```C#
 class Vehicle  // 基类（父类）
@@ -45,7 +45,7 @@ class Car : Vehicle  // 派生类（子）
   public string modelName = "Mustang";  // Car 字段
 }
 ```
-## 2.1. 密封关键字
+## 密封关键字
 如果不希望其他类从类继承，请使用`sealed`关键字
 ```C#
 sealed class Vehicle 
@@ -59,7 +59,7 @@ class Car : Vehicle
 }
 ```
 
-# 3. 多态
+# 多态
 C#提供了一个重写基类方法的选项，方法是将virtual关键字添加到基类内的方法，并对每个派生类方法使用override关键字：  
 ```C#
 class Animal  // 基类（父类）
@@ -107,7 +107,7 @@ The pig says: wee wee
 The dog says: bow wow
 ```
 
-# 4. 抽象类
+# 抽象类
 使用`abstract`关键字
 ```C#
 // 抽象类
@@ -143,7 +143,7 @@ class Program
 }
 ```
 
-# 5. 接口
+# 接口
 要访问接口方法，接口必须由另一个类实现(类似于继承)。要实现接口，请使用:符号(与继承一样)。接口方法的主体由"implement"类提供。 注意，在实现接口时，不必使用`override` 关键字  
 **可实现多个接口**
 ```C#
@@ -182,9 +182,9 @@ class Program
 }
 ```
 
-# 6. 枚举
+# 枚举
 枚举 `enum` 是一个特殊的类"class"，它表示一组常量(不可更改/只读变量)。  
-## 6.1. 类内枚举
+## 类内枚举
 ```C#
 class Program
 {
@@ -201,7 +201,7 @@ class Program
   }
 }
 ```
-## 6.2. 枚举值  
+## 枚举值  
 **必须进行显示转换为int**  
 可自定义枚举值
 ```C#
@@ -224,7 +224,7 @@ static void Main(string[] args)
 ```
 输出为7
 
-## 6.3. Switch中的应用
+## Switch中的应用
 ```C#
 enum Level 
 {
