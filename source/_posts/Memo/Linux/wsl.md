@@ -8,6 +8,8 @@ categories:
 tags:
 - Wsl
 - Linux
+
+toc: true
 ---
 # 安装 WSL
 ```
@@ -44,6 +46,27 @@ wsl --import Debian E:\wsl2\Debian E:\Debian2.tar
 ```
 
 # WSL操作
+## hosts问题
+
+wsl会自动获取物理机hosts文件内容，如果要改善git速度问题，建议在物理机安装[SwitchHosts](https://github.com/oldj/SwitchHosts)
+
+配置参考下面：
+
+- Title: 随意
+
+- Type: Remote
+
+- URL: https://raw.hellogithub.com/hosts
+
+- Auto Refresh: 最好选 1 hour
+
+## 在物理机资源管理器访问wsl文件
+### 在wsl命令行输入
+`explorer.exe .`  
+访问当前目录
+### 资源管理器输入
+`\\wsl$\{distro name}\`
+
 ## 配置WSL性能
 在文件 `%USERPROFILE%\.wslconfig` 中配置
 ```Bash

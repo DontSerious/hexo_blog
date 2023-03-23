@@ -5,7 +5,7 @@ categories:
 - C++
 
 tags:
-- Toolkit
+- toolkit
 ---
 
 # 标准错误流（cerr）
