@@ -6,7 +6,7 @@ categories:
 - Memo
 
 tags:
-- Emoji
+- emoji
 
 toc: true
 ---

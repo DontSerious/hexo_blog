@@ -5,7 +5,7 @@ categories:
 - Memo
 
 tags:
-- Markdown
+- markdown
 
 toc: true
 ---

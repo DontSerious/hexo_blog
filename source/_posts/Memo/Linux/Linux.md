@@ -6,8 +6,8 @@ categories:
 - Memo
 
 tags:
-- Debian
-- Linux
+- debian
+- linux
 ---
 # Linux 查看当前版本
 ```

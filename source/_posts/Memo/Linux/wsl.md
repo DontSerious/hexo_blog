@@ -6,8 +6,8 @@ categories:
 - Memo
 
 tags:
-- Wsl
-- Linux
+- wsl
+- linux
 
 toc: true
 ---
