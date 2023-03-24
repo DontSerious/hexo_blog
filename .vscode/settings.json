@@ -16,5 +16,8 @@
         "timeptr",
         "wday",
         "yday"
+    ],
+    "cSpell.enableFiletypes": [
+        "ignore"
     ]
 }
