@@ -5463,7 +5463,7 @@ table table {
 
 /* 代码块颜色设置 */
 pre .comment {
-  color: #149e65;
+  color: #00a352;
 }
 
 pre .variable,
@@ -5487,7 +5487,7 @@ pre .built_in,
 pre .literal,
 pre .params,
 pre .constant {
-  color: #f5871f;
+  color: #FFA500;
 }
 
 pre .ruby .class .title,
@@ -5501,12 +5501,13 @@ pre .inheritance,
 pre .header,
 pre .ruby .symbol,
 pre .xml .cdata {
-  color: #718c00;
+  color: #ddbe0f;
 }
 
 pre .title,
 pre .css .hexcolor {
-  color: #CB4B16;
+  color: #ff733f;
+  font-weight: bold;
 }
 
 pre .function,
@@ -5518,7 +5519,7 @@ pre .perl .sub,
 pre .javascript .title,
 pre .js .title,
 pre .coffeescript .title {
-  color: #268BD2;
+  color: #00BFFF;
 }
 
 pre .keyword,
@@ -5529,13 +5530,14 @@ pre .js .function {
 
 pre,
 .highlight {
-  background: #161616;
   margin: 10px 0;
   padding: 15px 10px;
   overflow: auto;
-  font-size: 13px;
   color: #93A1A1;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 14px;
   line-height: 1.5;
+  background-color: #161616;
 }
 
 .highlight .gutter pre,
@@ -5547,7 +5549,7 @@ code {
   /* text-shadow: 0 1px #fff; */
   /* padding: 0.2em 0.4em; */
   margin: 0 0.5em;
-  color: #D7BA7D;
+  color: #FFA500;
   /* background: rgb(255, 255, 255, 0.8); */
   /* border-radius: 3px; */
   /* font-size: 85%; */
