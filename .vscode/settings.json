@@ -12,6 +12,7 @@
         "isdst",
         "localtime",
         "mday",
+        "stdint",
         "timeptr",
         "wday",
         "yday"
