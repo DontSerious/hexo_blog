@@ -6,6 +6,8 @@ tags:
   - notes
   - CSAPP
 date: 2023-03-22 11:25:43
+
+toc: true
 ---
 # 2.1 信息存储
 

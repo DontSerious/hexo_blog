@@ -19,6 +19,5 @@ git config --replace-all user.email "email"
 ```
 
 # clone 下来的项目脱离git管理
-> 删除.git文件夹  
-> `git rm --cached`  
->> 解决“子项目错误”问题，会导致外层git也脱离
+删除.git文件夹`git rm --cached`  
+解决“子项目错误”问题，会导致外层git也脱离  
