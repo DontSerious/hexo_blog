@@ -45,7 +45,7 @@ wsl --unregister Debian
 wsl --import Debian E:\wsl2\Debian E:\Debian2.tar
 ```
 
-# WSL操作
+# WSL操作 [高级系统配置官方文档](https://learn.microsoft.com/zh-cn/windows/wsl/wsl-config#wslconfig)
 ## hosts问题
 
 wsl会自动获取物理机hosts文件内容，如果要改善git速度问题，建议在物理机安装[SwitchHosts](https://github.com/oldj/SwitchHosts)
@@ -70,36 +70,23 @@ wsl会自动获取物理机hosts文件内容，如果要改善git速度问题，
 ## 配置WSL性能
 在文件 `%USERPROFILE%\.wslconfig` 中配置
 ```Bash
-# Settings apply across all Linux distros running on WSL 2
 [wsl2]
-
-# Limits VM memory to use no more than 4 GB, this can be set as whole numbers using GB or MB
-memory=4GB 
-
-# Sets the VM to use two virtual processors
-processors=2
-
-# Specify a custom Linux kernel to use with your installed distros. The default kernel used can be found at https://github.com/microsoft/WSL2-Linux-Kernel
-kernel=C:\\temp\\myCustomKernel
-
-# Sets additional kernel parameters, in this case enabling older Linux base images such as Centos 6
-kernelCommandLine = vsyscall=emulate
-
-# Sets amount of swap storage space to 8GB, default is 25% of available RAM
-swap=8GB
-
-# Sets swapfile path location, default is %USERPROFILE%\AppData\Local\Temp\swap.vhdx
-swapfile=C:\\temp\\wsl-swap.vhdx
-
-# Disable page reporting so WSL retains all allocated memory claimed from Windows and releases none back when free
-pageReporting=false
-
-# Turn off default connection to bind WSL 2 localhost to Windows localhost
-localhostforwarding=true
-
-# Disables nested virtualization
-nestedVirtualization=false
-
-# Turns on output console showing contents of dmesg when opening a WSL 2 distro for debugging
-debugConsole=true
+memory=8GB          # 运存
+processors=3        # 处理器
+debugConsole=true   # 启动时开启debug窗口
 ```
+
+## 加速启动
+
+### 配置wsl不自动挂载全部硬盘
+
+在虚拟机`/etc/wsl.conf`中新增
+```Bash
+[automount]
+enabled=false           # 关闭自动挂载
+mountFsTab = true       # 如果需要单独挂载则开启FsTab配置挂载
+```
+
+### 配置/etc/fstab实现自动单独挂载
+示例：
+`C:  /mnt/c  drvfs rw,noatime,uid=1000,gid=1000,fmask=0027,dmask=0027,metadata 0 0`

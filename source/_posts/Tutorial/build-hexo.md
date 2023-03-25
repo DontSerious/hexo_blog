@@ -5,6 +5,7 @@ categories:
 tags:
   - hexo
 date: 2023-03-20 23:08:23
+toc: true
 ---
 # 环境配置
 ## 安装nodejs
@@ -142,6 +143,5 @@ deploy:
 # 部署至Netlify
 ## 进行无脑授权以及选择刚刚的项目仓库
 一切默认，除了构建命令(build command)改成我们之前设置的npm run netlify
-
 
 *sort from https://blog.cuijiacai.com/blog-building/*
