@@ -1,6 +1,11 @@
 <span class="article-date">
     <i class="icon icon-calendar-check"></i>
 	<a href="<%- url_for(post.path) %>" class="<%= class_name %>">
-	  <time datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= date(post.date, date_format) %></time>
+	  <time datetime="<%= date_xml(post.date) %>" itemprop="datePublished">创建于：<%= date(post.date, date_format) %></time>
+	</a>
+	&nbsp;
+	<i class="icon icon-calendar-check"></i>
+	<a href="<%- url_for(post.path) %>" class="<%= class_name %>">
+	  <time datetime="<%= date_xml(post.update_at) %>" itemprop="datePublished">最后更新于：<%= date(post.update_at, date_format) %></time>
 	</a>
 </span>
