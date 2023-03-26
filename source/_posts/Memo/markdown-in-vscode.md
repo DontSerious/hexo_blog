@@ -133,6 +133,43 @@ Try to put a blank line before...
 | ----------- | ----------- |
 | Header      | Title       |
 | Paragraph   | Text        |
+
+### html
+
+- `colspan`: 合并单元格
+- `style="text-align:center"`: 居中
+
+<table style="text-align:center">
+    <tr>
+        <td colspan="2">x</td>
+        <td colspan="2">-x(u 4)</td>
+    </tr>
+    <tr>
+        <td>十六进制</td>
+        <td>十进制</td>
+        <td>十进制</td>
+        <td>十六进制</td>
+    </tr>
+    <tr>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>5</td>
+        <td>11</td>
+        <td>B</td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td>8</td>
+        <td>8</td>
+        <td>8</td>
+    </tr>
+</table>
+
 ### 对齐
 您可以通过在标题行中的连字符的左侧，右侧或两侧添加冒号（:），将列中的文本对齐到左侧，右侧或中心。
 ```markdown

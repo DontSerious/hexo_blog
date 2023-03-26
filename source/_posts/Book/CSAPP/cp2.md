@@ -50,7 +50,7 @@ printf("x= %d,y= %lu\n"，x，y);
 **整数中除了最高有效位1，其他都存在与浮点数中**  
 
 ## 移位
-<table>
+<table style="text-align:center">
     <tr>
         <td colspan="2">x</td>
         <td colspan="2">x << 3</td>
@@ -188,3 +188,181 @@ int fun2(unsigned word) {
 - func1 没有改变word的值  
 - func2 当word倒数第二个字节位置处的数字大于等于8时，会输出一个负数  
 
+# 整数运算
+
+## 加法
+
+### 无符号加法
+
+<table style="text-align:center">
+    <tr>
+        <td colspan="2">x</td>
+        <td colspan="2">-x(u 4)</td>
+    </tr>
+    <tr>
+        <td>十六进制</td>
+        <td>十进制</td>
+        <td>十进制</td>
+        <td>十六进制</td>
+    </tr>
+    <tr>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>5</td>
+        <td>11</td>
+        <td>B</td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td>8</td>
+        <td>8</td>
+        <td>8</td>
+    </tr>
+    <tr>
+        <td>D</td>
+        <td>13</td>
+        <td>3</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>F</td>
+        <td>15</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+</table>
+
+*2.28*
+
+#### 代码
+
+```c
+/* Determine whether arguments can be added without overflow */
+int uAdd_ok(unsigned x, unsigned y) {
+    unsigned sum = x + y;
+    return sum >= x;
+}
+```
+
+### 补码加法
+
+|       x       |       y       |     x + y      |  x + y(t 5)   | 情况  |
+| :-----------: | :-----------: | :------------: | :-----------: | :---: |
+| [10100]\(-12) | [10001]\(-15) | [100101]\(-27) |  [00101]\(5)  |   1   |
+| [11000]\(-8)  | [11000]\(-8)  | [110000]\(-16) | [10000]\(-16) |   2   |
+| [10111]\(-9)  |  [01000]\(8)  | [111111]\(-1)  | [11111]\(-1)  |   2   |
+|  [00010]\(2)  |  [00101]\(5)  |  [000111]\(7)  |  [00111]\(7)  |   3   |
+| [01100]\(12)  |  [00100]\(4)  | [010000]\(16)  | [10000]\(-16) |   4   |
+
+*2.29*
+
+#### 代码
+
+```c
+/* Determine whether arguments can be added without overflow */
+int tAdd_ok(int x, int y) {
+    int sum = x + y;
+    int neg_over = x < 0 && y < 0 && sum >= 0;
+    int pos_over = x > 0 && y > 0 && sum < 0;
+    return !neg_over && !pos_over;
+}
+```
+
+## 补码的非
+
+<table style="text-align:center">
+    <tr>
+        <td colspan="2">x</td>
+        <td colspan="2">-x(t 4)</td>
+    </tr>
+    <tr>
+        <td>十六进制</td>
+        <td>十进制</td>
+        <td>十进制</td>
+        <td>十六进制</td>
+    </tr>
+    <tr>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>5</td>
+        <td>-5</td>
+        <td>B</td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td>-8</td>
+        <td>-8</td>
+        <td>8</td>
+    </tr>
+    <tr>
+        <td>D</td>
+        <td>-3</td>
+        <td>3</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>F</td>
+        <td>-1</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+</table>
+
+*2.33*
+
+## 乘法
+
+### 二进制乘法运算
+
+模仿手工算十进制乘法，一位位乘然后再加
+```
+     1001
+*    1101
+=============
+     1001
+    0000
+   1001
++ 1001
+=============
+  1110101
+```
+
+### 规律
+
+- 虽然完整的乘机的位级表示可能会不同，但是截断后成绩的位级表示是相同的。
+
+|      模式       |            x             |            y             |               x·y               |        截断的x·y         |
+| :-------------: | :----------------------: | :----------------------: | :-----------------------------: | :----------------------: |
+| 无符号</br>补码 | \[100](4)</br>\[100](-4) | \[101](5)</br>\[101](-3) | \[010100](20)</br>\[001100](12) | \[100](4)</br>\[100](-4) |
+| 无符号</br>补码 | \[010](2)</br>\[010](2)  | \[111](7)</br>\[111](-1) | \[001110](14)</br>\[111110](-2) | \[110](6)</br>\[110](-2) |
+| 无符号</br>补码 | \[110](6)</br>\[110](-2) | \[110](6)</br>\[110](-2) | \[100100](36)</br>\[000100](4)  | \[100](4)</br>\[100](-4) |
+
+### 代码
+
+```c
+int tMul_ok(int32_t x, int32_t y)
+{
+	int32_t p = x * y;
+
+	/* Either x is zero, or dividing p by x gives y */
+	return !x || p / x == y;
+}
+
+int tMul_ok2(int32_t x, int32_t y)
+{
+	int64_t p = (int64_t)x * y; /*一定要先将右边手动转成 int64_t */
+	/*printf("p=%" PRId64 ", q=%" PRId32 "\n", p,q);*/
+
+	return p == (int32_t)p;
+}
+```
