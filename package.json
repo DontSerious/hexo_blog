@@ -10,11 +10,11 @@
     "netlify": "npm run clean && npm run build"
   },
   "hexo": {
-    "version": "6.3.0"
+    "version": "7.0.0-rc1"
   },
   "dependencies": {
     "git": "^0.1.5",
-    "hexo": "^6.3.0",
+    "hexo": "7.0.0-rc1",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-index": "^3.0.0",
@@ -26,6 +26,7 @@
     "hexo-server": "^3.0.0",
     "hexo-theme-landscape": "^0.0.3",
     "hexo-wordcount": "^6.0.1",
+    "i": "^0.3.7",
     "markdown-it-emoji": "^2.0.2"
   }
 }
