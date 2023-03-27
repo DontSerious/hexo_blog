@@ -4,74 +4,50 @@ version: 5.1.0
 variant: default
 # Path or URL to the website's logo
 logo:
-    light: static/avatar.jpg
-    dark: static/avatar.jpg
+    light: /images/logo.png
+    dark: /images/logo-dark.png
 # Page metadata configurations
 head:
     # URL or path to the website's icon
-    favicon: static/avatar.jpg
-    # Web application manifests configuration
-    # https://developer.mozilla.org/en-US/docs/Web/Manifest
-    # manifest:
-        # Name of the web application (default to the site title)
-        # name: ToMaTo's Blog
-        # The displayed name of the web application
-        # when there is not enough space to display full name
-        # short_name: Blog
-        # The start URL of the web application
-        # start_url: https://tomatoblog.netlify.app/
-        # The default theme color for the application
-        # theme_color: #121212
-        # A placeholder background color for the application page to display
-        # before its stylesheet is loaded
-        # background_color: 
-        # The preferred display mode for the website
-        # display: standalone
-        # Image files that can serve as application icons for different contexts
-        # icons:
-            # -
-                # The path to the image file
-                # src: 'static/avatar.jpg'
-                # A string containing space-separated image dimensions
-                # sizes: ''
-                # A hint as to the media type of the image
-                # type: 
+    favicon: /favicon.ico
+    # Canonical URL of the current page
+    #canonical_url: 
     # Open Graph metadata
     # https://hexo.io/docs/helpers.html#open-graph
-    # open_graph:
+    #open_graph:
         # Page title (og:title) (optional)
         # You should leave this blank for most of the time
-        # title: 
+        #title: 
         # Page type (og:type) (optional)
         # You should leave this blank for most of the time
-        # type: blog
+        #type: blog
         # Page URL (og:url) (optional)
         # You should leave this blank for most of the time
-        # url: 
-        # Page cover (og:image) (optional)
+        #url: 
+        # Page cover (og:image) (optional) Default to the Open Graph image or thumbnail of the page
         # You should leave this blank for most of the time
-        # image: 
+        #image: 
         # Site name (og:site_name) (optional)
         # You should leave this blank for most of the time
-        # site_name: 
+        #site_name: 
         # Page author (article:author) (optional)
         # You should leave this blank for most of the time
-        # author: 
+        #author: 
         # Page description (og:description) (optional)
         # You should leave this blank for most of the time
-        # description: 
+        #description: 
         # Twitter card type (twitter:card)
-        # twitter_card: 
+        #twitter_card: 
         # Twitter ID (twitter:creator)
-        # twitter_id: 
-        # Twitter Site (twitter:site)
-        # twitter_site: 
+        #twitter_id: 
+        # Twitter ID (twitter:creator)
+        #twitter_site: 
         # Google+ profile link (deprecated)
-        # google_plus: 
+        #google_plus: 
         # Facebook admin ID
-        # fb_admins: 
+        #fb_admins: 
         # Facebook App ID
-        # fb_app_id: 
+        #fb_app_id: 
     # Structured data of the page
     # https://developers.google.com/search/docs/guides/intro-structured-data
     structured_data:
@@ -87,13 +63,7 @@ head:
         # Page author (article:author) (optional)
         # You should leave this blank for most of the time
         author: 
-        # Page publisher (optional)
-        # You should leave this blank for most of the time
-        publisher: 
-        # Page publisher logo (optional)
-        # You should leave this blank for most of the time
-        publisher_logo: 
-        # Page images (optional)
+        # Page images (optional) Default to the Open Graph image or thumbnail of the page
         # You should leave this blank for most of the time
         image: 
     # Additional HTML meta tags in an array
@@ -102,24 +72,26 @@ head:
         # E.g., name=theme-color;content=#123456 => <meta name="theme-color" content="#123456">
         - ''
     # URL or path to the website's RSS atom.xml
-    rss: 
+    rss: /atom.xml
 # Page top navigation bar configurations
 navbar:
-    # Navigation menu items
+    # Naviagtion menu items
     menu:
         首页: /
         时间轴: /archives/
         分类: /categories/
         标签: /tags/
+        网盘: 'https://imaegoo.azurewebsites.net'
+        留言板: /messages/
+        友情链接: /friends/
+        关于: /about/
     # Links to be shown on the right of the navigation bar
     links:
-        # Download on GitHub:
-        #     icon: fab fa-github
-        #     url: https://github.com/DontSerious/hexo_blog
+        # Admin:
+        #     icon: fas fa-cog
+        #     url: 'https://admin.imaegoo.com'
 # Page footer configurations
 footer:
-    # Copyright text
-    # copyright: © 2019
     # Links to be shown on the right of the footer section
     links:
         Creative Commons:
@@ -128,6 +100,7 @@ footer:
         Attribution 4.0 International:
             icon: fab fa-creative-commons-by
             url: 'https://creativecommons.org/licenses/by/4.0/deed.zh'
+    icp: '豫ICP备18017229号'
 # Article related configurations
 article:
     # Code highlight settings
@@ -143,7 +116,7 @@ article:
     thumbnail: true
     # Whether to show estimated article reading time
     readtime: true
-    # Whether to show updated time. For "auto", shows article update time only when page.updated is set and it is different from page.date
+    # Whether to show updated time. For \"auto\", shows article update time only when page.updated is set and it is different from page.date
     update_time: auto
     # Article licensing block
     licenses:
@@ -151,6 +124,8 @@ article:
             icon: fab fa-creative-commons
             url: 'https://creativecommons.org/'
         'CC BY 4.0': 'https://creativecommons.org/licenses/by/4.0/deed.zh'
+    # og_image
+    og_image: /images/og_image.png
 # Search plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Search/
 search:
@@ -159,50 +134,29 @@ search:
 # Comment plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
 comment:
-    type: disqus
-    # Disqus shortname
-    shortname: ''
+    # Name of the comment plugin
+    type: twikoo
+    envId: https://twikoo.imaegoo.com
+    jsUrl: /js/imaegoo/twikoo/1.6.7/twikoo.min.js
+    # type: utterances
+    # repo: imaegoo/imaegoo.github.io
+    # issue_term: pathname
+    # label: utterances
+    # theme: preferred-color-scheme
 # Donate plugin configurations
-# https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
 donates:
-    # "Afdian.net" donate button configurations
-    -
-        type: afdian
-        # URL to the "Afdian.net" personal page
-        url: ''
     # Alipay donate button configurations
     -
         type: alipay
         # Alipay qrcode image URL
-        qrcode: ''
-    # "Buy me a coffee" donate button configurations
-    -
-        type: buymeacoffee
-        # URL to the "Buy me a coffee" page
-        url: ''
-    # Patreon donate button configurations
-    -
-        type: patreon
-        # URL to the Patreon page
-        url: ''
-    # Paypal donate button configurations
-    -
-        type: paypal
-        # Paypal business ID or email address
-        business: ''
-        # Currency code
-        currency_code: USD
+        qrcode: '/images/alipay.jpg'
     # Wechat donate button configurations
     -
         type: wechat
         # Wechat qrcode image URL
-        qrcode: ''
+        qrcode: '/images/wechat.png'
 # Share plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Share/
-# share:
-    # type: sharethis
-    # URL to the ShareThis share plugin script
-    # install_url: ''
 # Sidebar configurations.
 # Please be noted that a sidebar is only visible when it has at least one widget
 sidebar:
@@ -223,36 +177,33 @@ widgets:
         position: left
         type: profile
         # Author name
-        author: ToMaTo
+        author: iMaeGoo
         # Author title
-        author_title: Back-end Developer
+        author_title: 虹墨空间站
         # Author's current location
-        location: GuangZhou, China
+        location: Zhengzhou, China
         # URL or path to the avatar image
-        avatar: static/avatar.jpg
+        avatar: /images/avatar.jpg
         # Whether show the rounded avatar image
         avatar_rounded: true
         # Email address for the Gravatar
         gravatar: 
         # URL or path for the follow button
-        follow_link: https://github.com/dontSerious/
+        follow_link: 'https://space.bilibili.com/4750943'
         # Links to be shown on the bottom of the profile widget
-        # social_links:
-        #     Github:
-        #         icon: fab fa-github
-        #         url: https://github.com/dontSerious/
-            # Facebook:
-            #     icon: fab fa-facebook
-            #     url: https://facebook.com
-            # Twitter:
-            #     icon: fab fa-twitter
-            #     url: https://twitter.com
-            # Dribbble:
-            #     icon: fab fa-dribbble
-            #     url: https://dribbble.com
-            # RSS:
-            #     icon: fas fa-rss
-            #     url: /
+        social_links:
+            GitHub:
+                icon: fab fa-github
+                url: 'https://github.com/imaegoo'
+            QQ:
+                icon: fab fa-qq
+                url: 'https://jq.qq.com/?_wv=1027&k=2l9ZGIoL'
+            Mail:
+                icon: fas fa-envelope
+                url: 'mailto:hello@imaegoo.com'
+            RSS:
+                icon: fas fa-rss
+                url: '/atom.xml'
     # Archives widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
@@ -261,20 +212,27 @@ widgets:
     # Categories widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
-        position: right
+        position: left
         type: categories
     # Tags widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
-        position: right
+        position: left
         type: tags
     # Recommendation links widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
-        position: hide
+        position: left
         type: links
         # Names and URLs of the sites
         links:
+            maemoの風船が！: 'https://maemo.cc'
+            米米的博客: 'https://zhangshuqiao.org'
+            辣椒の酱: 'https://removeif.github.io'
+            Sakitami的集装箱: 'https://blog.skihome.xyz'
+            明月逐人归: 'https://mingshan.fun'
+            宇宙湾: 'https://yuzhouwan.com'
+            Ray’s Blog: 'https://raycoder.me'
     # Google AdSense unit configurations
     #-
     #    # Where should the widget be placed, left sidebar or right sidebar
@@ -287,21 +245,20 @@ widgets:
     # Table of contents widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
-        position: hide
+        position: right
         type: toc
     # Recent posts widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
-        position: left
+        position: right
         type: recent_posts
     # Twikoo new comment widget configurations
-    # -
+    -
         # Where should the widget be placed, left sidebar or right sidebar
-        # position: hide
-        # type: 
-        # envId: 
+        position: right
+        type: twikoo_new
+        envId: https://twikoo.imaegoo.com
 # Plugin configurations
-# https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/
 plugins:
     # Enable page startup animations
     animejs: false
@@ -311,36 +268,12 @@ plugins:
     # https://tongji.baidu.com
     baidu_analytics:
         # Baidu Analytics tracking ID
-        tracking_id: 
-    # Bing Webmaster Tools plugin settings
-    # https://www.bing.com/toolbox/webmaster/
-    bing_webmaster:
-        # Bing Webmaster Tools tracking ID in the <meta> tag
-        tracking_id: 
+        tracking_id: 4d5b97d11341c6f57b58fc622dc1ac38
     # BuSuanZi site/page view counter
     # https://busuanzi.ibruce.info
-    busuanzi: false
-    # CNZZ statistics
-    # https://www.umeng.com/web
-    cnzz:
-        # CNZZ tracker id
-        id: 
-        # CNZZ website id
-        web_id: 
-    # Alerting users about the use of cookies
-    # https://www.osano.com/cookieconsent/
-    cookie_consent:
-        # The compliance type. Can be "info", "opt-in", or "opt-out"
-        type: info
-        # Theme of the popup. Can be "block", "edgeless", or "classic"
-        theme: edgeless
-        # Whether the popup should stay static regardless of the page scrolls
-        static: false
-        # Where on the screen the consent popup should display
-        position: bottom-right
-        # URL to your site's cookie policy
-        policyLink: https://www.cookiesandyou.com/
+    busuanzi: true
     # Enable the lightGallery and Justified Gallery plugins
+    # https://ppoffice.github.io/hexo-theme-icarus/Plugins/General/gallery-plugin/
     gallery: true
     # Google Analytics plugin settings
     # https://analytics.google.com
@@ -352,7 +285,7 @@ plugins:
     hotjar:
         # Hotjar site id
         site_id: 
-    # Enable the KaTeX math typesetting support
+    # Enable the KaTeX math typesetting supprot
     # https://katex.org/
     katex: false
     # Enable the MathJax math typesetting support
@@ -362,19 +295,18 @@ plugins:
     # http://outdatedbrowser.com/
     outdated_browser: false
     # Show a progress bar at top of the page on page loading
-    progressbar: true
-    # Statcounter statistics
-    # https://statcounter.com/
-    statcounter:
-        # Statcounter project id
-        project: 
-        # Statcounter project security code
-        security: 
-    # Twitter conversion tracking plugin settings
-    # https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html
-    twitter_conversion_tracking:
-        # Twitter Pixel ID
-        pixel_id: 
+    progressbar: false
+    cookie_consent:
+        # 同意对话框类型。可以为"info"，"opt-in"，或"opt-out"
+        type: info
+        # 弹出框主题。可以为"block"，"edgeless"，或"classic"
+        theme: edgeless
+        # 是否使弹出框固定，不随页面滚动而滚动
+        static: false
+        # 弹出框在屏幕上的位置
+        position: bottom-right
+        # 你网站的Cookie协议的URL
+        policyLink: '/cookies/'
 # CDN provider settings
 # https://ppoffice.github.io/hexo-theme-icarus/Configuration/Theme/speed-up-your-site-with-custom-cdn/
 providers:
