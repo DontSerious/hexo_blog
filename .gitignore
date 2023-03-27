@@ -14,3 +14,5 @@ db.json
 # Built Visual Studio Code Extensions
 *.vsix
 node_modules
+
+source/_posts/*.js
