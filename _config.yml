@@ -1,43 +1,30 @@
-# Hexo Configuration
-## Docs: https://hexo.io/docs/configuration.html
-## Source: https://github.com/hexojs/hexo/
-
-# Site
 title: Tomato's Blog
 subtitle: ''
 description: ''
-keywords:
+keywords: null
 author: TOMATO
 language: zh-CN
 timezone: ''
-
-# URL
-## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://tomatoblog.netlify.app/
-# permalink: :year/:month/:day/:title/
-permalink: :title/
-permalink_defaults:
+permalink: ':title/'
+permalink_defaults: null
 pretty_urls:
-  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: true # Set to false to remove trailing '.html' from permalinks
-
-# Directory
+  trailing_index: true
+  trailing_html: true
 source_dir: source
 public_dir: public
 tag_dir: tags
 archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
-i18n_dir: :lang
-skip_render:
-
-# Writing
-new_post_name: :title.md # File name of new posts
+i18n_dir: ':lang'
+skip_render: null
+new_post_name: ':title.md'
 default_layout: post
-titlecase: false # Transform title into titlecase
+titlecase: false
 external_link:
-  enable: true # Open external links in new tab
-  field: site # Apply to the whole site
+  enable: true
+  field: site
   exclude: ''
 filename_case: 0
 render_drafts: false
@@ -56,106 +43,55 @@ prismjs:
   preprocess: true
   line_number: true
   tab_replace: ''
-
-# Home page setting
-# path: Root path for your blogs index page. (default = '')
-# per_page: Posts displayed per page. (0 = disable pagination) 主页单页数量
-# order_by: Posts order. (Order by date descending by default)
 index_generator:
   path: ''
   per_page: 12
-  order_by: -date
-
-# Category & Tag
+  order_by: '-date'
 default_category: uncategorized
-category_map:
-tag_map:
-
-# Metadata elements
-## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+category_map: null
+tag_map: null
 meta_generator: true
-
-# Date / Time format
-## Hexo uses Moment.js to parse and display date
-## You can customize the date format as defined in
-## http://momentjs.com/docs/#/displaying/format/
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
-## updated_option supports 'mtime', 'date', 'empty'
-updated_option: 'date'
-
-# Pagination
-## Set per_page to 0 to disable pagination
-## 归档单页数量
+updated_option: date
 per_page: 30
 pagination_dir: page
-
-# Include / Exclude file(s)
-## include:/exclude: options only apply to the 'source/' folder
-include:
-exclude:
-ignore:
-
-# Extensions
-## Plugins: https://hexo.io/plugins/
-## Themes: https://hexo.io/themes/
-theme: pure
-
-# Deployment
-## Docs: https://hexo.io/docs/one-command-deployment
+include: null
+exclude: null
+ignore: null
+theme: icarus
 deploy:
   type: ''
-
-# Search
-
 search:
   path: search.xml
   field: post
   format: html
   limit: 10000
-
-# Markdown-it config
-## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki
-## cn_Docs: https://markdown-it.docschina.org/api/MarkdownIt.html#markdownit-new
 markdown:
   render:
-    # false。设成 true 来启用在源码中(支持) HTML 标签。注意！这是不安全的！你可能需要额外的消毒剂(sanitizer)来组织来自 XSS 的输出。最好是通过插件来扩展特性，而不是启用 HTML。
     html: true
-    # 设成 true 来给闭合的单个标签（<br />）添加 '/'。只有完全兼容 CommonMark 模式时才需要这样做。实际上你只需要 HTML 输出。
     xhtmlOut: false
-    # 设成 true 来转化段落里的 \n 成 <br>
     breaks: true
-    # 设成 true 来自动转化像 URL 的文本成链接。
     linkify: true
-    # 设成 true 来启用某些语言中性的替换以及引号的美化（智能引号）。
     typographer: true
-    # String 或 Array 类型。在 typographer 启用和支持智能引号时，进行双引号 + 单引号对替换。 比方说，
-    # 你可以支持 '«»„“' 给俄罗斯人使用， '„“‚‘' 给德国人使用。
-    # 还有 ['«\xA0', '\xA0»', '‹\xA0', '\xA0›']  给法国人使用（包括 nbsp）。
-    quotes: "“”‘’"
+    quotes: “”‘’
   plugins:
     - markdown-it-abbr
     - markdown-it-footnote
     - markdown-it-ins
     - markdown-it-sub
     - markdown-it-sup
-    - markdown-it-emoji # add emoji
+    - markdown-it-emoji
   anchors:
     level: 1
-    collisionSuffix: "v"
-    # If `true`, creates an anchor tag with a permalink besides the heading.
-    # 如果为“true”，则在标题旁边创建一个带有永久链接的定位标记。
+    collisionSuffix: v
     permalink: false
     permalinkClass: header-anchor
-    # The symbol used to make the permalink
-    # 用于生成永久链接的符号
     permalinkSymbol: ˃
-
-# hexo-neat
 neat_enable: true
 neat_html:
   enable: true
-  exclude:  
+  exclude: null
 neat_css:
   enable: true
   exclude:
@@ -163,7 +99,7 @@ neat_css:
 neat_js:
   enable: true
   mangle: true
-  output:
-  compress:
+  output: null
+  compress: null
   exclude:
-    - '*.min.js' 
+    - '*.min.js'
