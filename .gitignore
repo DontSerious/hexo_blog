@@ -1,12 +1,4 @@
-public/
-db.json
-
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-!.vscode/*.code-snippets
+public
 
 # Local History for Visual Studio Code
 .history/
@@ -15,4 +7,7 @@ db.json
 *.vsix
 node_modules
 
-source/_posts/*.js
+db.json
+.vscode/time.code-snippets
+.vscode/
+.vscode/settings.json
