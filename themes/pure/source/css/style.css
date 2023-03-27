@@ -6413,7 +6413,7 @@ body.no-sidebar .sidebar {
 }
 
 .article-header {
-  margin-bottom: 42px;
+  margin-bottom: 0px;
 }
 
 .article-footer {
@@ -6683,7 +6683,7 @@ body.okayNav-loaded {
 }
 
 .okayNav a {
-  color: #2e2e33;
+  color: rgb(255, 255, 255, 0.7);
   font-weight: 400;
 }
 
