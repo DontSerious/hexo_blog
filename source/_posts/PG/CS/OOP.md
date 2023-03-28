@@ -1,12 +1,9 @@
 ---
 title: C# OOP
 date: 2023-03-12 16:32:13
+updated: 2023-03-12 16:32:13
 categories:
-- CS
-
-tags:
-- grammar
-
+- [PG, CS]
 toc: true
 ---
 # 属性

@@ -1,10 +1,7 @@
 ---
 title: cp2：信息的表示和处理
 categories:
-  - Book
-tags:
-  - notes
-  - CSAPP
+  - [Book, CSAPP]
 date: 2023-03-22 11:25:43
 updated: 2023-03-26 21:34:02
 

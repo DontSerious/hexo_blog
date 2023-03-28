@@ -1,11 +1,9 @@
 ---
 title: 40 search
 categories:
-  - Book
-tags:
-  - psychology
-  - notes
+  - [Book, Psychology]
 date: 2023-03-22 08:39:38
+updated: 2023-03-22 08:39:38
 
 toc: true
 ---

@@ -1,12 +1,9 @@
 ---
 title: markdown in vscode
 date: 2023-03-12 15:28:35
+updated: 2023-03-12 15:28:35
 categories:
 - Memo
-
-tags:
-- markdown
-
 toc: true
 ---
 # 基础语法

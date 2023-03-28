@@ -1,11 +1,9 @@
 ---
 title: OOP class
 date: 2023-03-19 14:50:00
+updated: 2023-03-19 14:50:00
 categories:
-- C++
-
-tags:
-- OOP
+- [PG, C++]
 ---
 
 # 类定义
