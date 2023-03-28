@@ -158,45 +158,45 @@ search:
     json: /content.json
 # Comment plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
-comment:
-    type: disqus
+# comment:
+    # type: disabled
     # Disqus shortname
-    shortname: ''
+    # shortname: ''
 # Donate plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
-donates:
+# donates:
     # "Afdian.net" donate button configurations
-    -
-        type: afdian
+    # -
+        # type: afdian
         # URL to the "Afdian.net" personal page
-        url: ''
+        # url: ''
     # Alipay donate button configurations
-    -
-        type: alipay
+    # -
+        # type: alipay
         # Alipay qrcode image URL
-        qrcode: ''
+        # qrcode: ''
     # "Buy me a coffee" donate button configurations
-    -
-        type: buymeacoffee
+    # -
+        # type: buymeacoffee
         # URL to the "Buy me a coffee" page
-        url: ''
+        # url: ''
     # Patreon donate button configurations
-    -
-        type: patreon
+    # -
+        # type: patreon
         # URL to the Patreon page
-        url: ''
+        # url: ''
     # Paypal donate button configurations
-    -
-        type: paypal
+    # -
+        # type: paypal
         # Paypal business ID or email address
-        business: ''
+        # business: ''
         # Currency code
-        currency_code: USD
+        # currency_code: USD
     # Wechat donate button configurations
-    -
-        type: wechat
+    # -
+        # type: wechat
         # Wechat qrcode image URL
-        qrcode: ''
+        # qrcode: ''
 # Share plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Share/
 # share:
@@ -253,6 +253,11 @@ widgets:
             # RSS:
             #     icon: fas fa-rss
             #     url: /
+    # Table of contents widget configurations
+    -
+        # Where should the widget be placed, left sidebar or right sidebar
+        position: right
+        type: toc
     # Archives widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
@@ -267,7 +272,7 @@ widgets:
     # Tags widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
-        position: right
+        position: hide
         type: tags
     # Recommendation links widget configurations
     -
@@ -285,11 +290,6 @@ widgets:
     #    client_id: 'ca-pub-5716633754544549'
     #    # AdSense AD unit ID
     #    slot_id: '6035187824'
-    # Table of contents widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: hide
-        type: toc
     # Recent posts widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
