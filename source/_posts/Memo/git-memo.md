@@ -1,11 +1,9 @@
 ---
 title: git
 date: 2023-03-18 15:41:53
+updated: 2023-03-18 15:41:53
 categories:
 - Memo
-
-tags:
-- git
 ---
 
 # 配置

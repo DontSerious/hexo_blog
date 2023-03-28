@@ -5,7 +5,4 @@ updated: {{ date }}
 categories:
 - 
 
-tags:
-- 
-
 ---

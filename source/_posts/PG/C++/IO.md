@@ -1,11 +1,9 @@
 ---
 title: IO
 date: 2023-03-19 14:27:30
+updated: 2023-03-19 14:27:30
 categories:
-- C++
-
-tags:
-- toolkit
+- [PG, C++]
 ---
 
 # 标准错误流（cerr）

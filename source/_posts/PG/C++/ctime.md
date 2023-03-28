@@ -1,11 +1,9 @@
 ---
 title: ctime
 date: 2023-03-19 13:45:31
+updated: 2023-03-19 13:45:31
 categories:
-- C++
-
-tags:
-- toolkit
+- [PG, C++]
 ---
 # ctime常用函数
 
