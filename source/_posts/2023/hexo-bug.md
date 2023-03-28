@@ -1,7 +1,9 @@
 ---
 title: 使用vscode快捷键解决hexo的updated时间插入问题
 categories:
-  - [Tutorial, Hexo]
+  - Tutorial
+tags:
+  - hexo
 date: 2023-03-27 21:20:15
 updated: 2023-03-27 21:20:15
 ---

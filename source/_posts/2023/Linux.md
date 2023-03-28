@@ -3,7 +3,9 @@ title: Linux 备忘基操
 date: 2023-02-24 17:28:00
 updated: 2023-02-24 17:28:00
 categories:
-- [Memo, Linux]
+- Memo
+tags:
+- linux
 ---
 # Linux 查看当前版本
 ```

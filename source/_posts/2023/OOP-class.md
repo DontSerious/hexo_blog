@@ -3,7 +3,9 @@ title: OOP class
 date: 2023-03-19 14:50:00
 updated: 2023-03-19 14:50:00
 categories:
-- [PG, C++]
+- BackEnd
+tags:
+- cpp
 ---
 
 # 类定义

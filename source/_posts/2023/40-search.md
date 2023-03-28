@@ -1,10 +1,11 @@
 ---
 title: 40 search
 categories:
-  - [Book, Psychology]
+  - Book
+tags:
+  - psychology
 date: 2023-03-22 08:39:38
 updated: 2023-03-22 08:39:38
-
 toc: true
 ---
 # 丰富的经历是否等于更大的大脑？

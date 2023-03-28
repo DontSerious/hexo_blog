@@ -1,7 +1,9 @@
 ---
 title: imaegoo log
 categories:
-  - Log
+  - Memo
+tags:
+  - log
 date: 2023-03-28 13:46:42
 updated: 2023-03-28 13:46:42
 ---

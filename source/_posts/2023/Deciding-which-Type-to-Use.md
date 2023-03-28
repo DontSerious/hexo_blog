@@ -3,7 +3,9 @@ title: Deciding which Type to Use
 date: 2023-02-26 10:42:33
 updated: 2023-02-26 10:42:33
 categories:
-- [PG, C++]
+- BackEnd
+tags:
+- cpp
 ---
 
 1. **Use an unsigned type when you know that the vales cannot be negative.**

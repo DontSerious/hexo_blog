@@ -3,7 +3,9 @@ title: wsl 备忘基操
 date: 2023-02-24 10:24:20
 updated: 2023-02-24 10:24:20
 categories:
-- [Memo, Linux]
+- Memo
+tags:
+- linux
 toc: true
 ---
 # 安装 WSL

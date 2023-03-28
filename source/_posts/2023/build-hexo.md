@@ -1,7 +1,9 @@
 ---
 title: build hexo
 categories:
-  - [Tutorial, Hexo]
+  - Tutorial
+tags:
+  - hexo
 date: 2023-03-20 23:08:23
 toc: true
 ---

@@ -3,7 +3,9 @@ title: ctime
 date: 2023-03-19 13:45:31
 updated: 2023-03-19 13:45:31
 categories:
-- [PG, C++]
+- BackEnd
+tags:
+- cpp
 ---
 # ctime常用函数
 

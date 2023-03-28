@@ -3,7 +3,9 @@ title: IO
 date: 2023-03-19 14:27:30
 updated: 2023-03-19 14:27:30
 categories:
-- [PG, C++]
+- BackEnd
+tags:
+- cpp
 ---
 
 # 标准错误流（cerr）
