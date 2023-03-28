@@ -258,6 +258,7 @@ widgets:
         # Where should the widget be placed, left sidebar or right sidebar
         position: left
         type: archives
+        format: YYYY年MM月DD日
     # Categories widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
