@@ -3,4 +3,4 @@
 	url = https://github.com/DontSerious/hexo-theme-icarus.git
 [submodule "source"]
 	path = source
-	url = git@bitbucket.org:tomatobucket/blog.git
+	url = git@bitbucket.org:tomatobucket/source.git
